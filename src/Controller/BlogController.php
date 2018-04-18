@@ -17,11 +17,11 @@ class BlogController extends Controller
     /**
      * Matches /blog exactly
      *
-     * @Route("/blog", name="blog_list")
+     * @Route("/blog/{page}", name="blog_list", requirements={"page"="\d+"})
      */
-    public function list()
+    public function list($page)
     {
-        return new Response("<body>blog_list</body>");
+        return new Response("<body>List: " . $page . "</body>");
     }
 
     /**
@@ -36,6 +36,6 @@ class BlogController extends Controller
         // $slug will equal the dynamic part of the URL
         // e.g. at /blog/yay-routing, then $slug='yay-routing'
 
-        return new Response('<body>placeholder parameter: ' . $placeholder . '</body>');
+        return new Response('<body>Show: ' . $placeholder . '</body>');
     }
 }
