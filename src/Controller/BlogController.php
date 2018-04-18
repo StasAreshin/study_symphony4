@@ -21,10 +21,6 @@ class BlogController extends Controller
      */
     public function list()
     {
-//        return $this->render('base.html.twig', array(
-//            'title' => 'Some title',
-//            'body' => 'BodY',
-//        ));
         return new Response("<body>blog_list</body>");
     }
 
