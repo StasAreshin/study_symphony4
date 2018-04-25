@@ -14,11 +14,6 @@ use Symfony\Component\HttpFoundation\Response;
 class MainController
 {
     public function contact() {
-        return new Response("<body><h1>Contact</h1>"
-//            . "<ul><li>_locale: " . $app.locale . "</li>"
-//            . "<li>year: " . $year . "</li>"
-//            . "<li>slug: " . $slug . "</li>"
-//            . "<li>_format: " . $_format . "</li></ul></body>"
-        );
+        return new Response("<body><h1>Contact</h1></body>");
     }
 }
